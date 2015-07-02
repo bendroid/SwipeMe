@@ -88,19 +88,117 @@
 
 <!-- SWIPEME CONTAINER -->
 
-<div class="container">
+
   <div id="swipeme">
       <div class="off-canvas-left">Left off-canvas</div>
       <div class="main-content">Main content</div>
       <div class="off-canvas-right">Right off-canvas</div>
   </div>
+
+
+<div class="container-fluid">
+<div class="row text-center">
+   <div class="col-xs-12 col-md-6 col-lg-6"><h2 class="title">Ben Collins<p><small>Front-End Web Developer</small></p></h2></div>
+
+<div class="col-xs-12 col-md-6 col-lg-6">
+	  <img class="center-block img-responsive img-circle" href="#" data-toggle="modal" data-target=".bs-example-modal-lg" data-src="holder.js/64x64" alt="Ben Collins" src="images/ben-sm.jpg" data-holder-rendered="true">
+
+  
+    <div class="btn-social-lg">
+      <a href="https://github.com/bendroid/" target="_blank" class="btn btn-lg btn-github fa fa-github"></a>
+      <a href="https://twitter.com/jaemood/" target="_blank" class="btn btn-lg btn-twitter fa fa-twitter"></a>
+      <a href="https://plus.google.com/110080867018847121215/" target="_blank" class="btn btn-lg btn-google-plus fa fa-google-plus"></a>
+      <a href="https://www.linkedin.com/pub/ben-collins/15/663/b43" target="_blank" class="btn btn-lg btn-linkedin fa fa-linkedin"></a>
+    </div>
+  </div>
 </div>
-
-
+</div>
 
 <!-- END SWIPEME CONTAINER -->
 
 
+
+
+<div class="=container-fluid">
+				<a href="http://kinglozzer.github.io/SwipeMe/demo/index.html">Home</a>
+				<a href="https://github.com/kinglozzer/SwipeMe/" target="_blank">Download</a>
+
+	<div id="swipeme" class="main">
+		<div id="swipeme-left" class="panel panel-left">
+			<div class="page-header">
+				<h2>About</h2>
+			</div>
+			<p>Built by Loz Calver:</p>
+			<ul>
+				<li><a href="https://github.com/kinglozzer" target="_blank">Github</a></li>
+				<li><a href="https://twitter.com/kinglozzer" target="_blank">Twitter</a></li>
+			</ul>
+			<p>Demo page built with the wonderful <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, icons by <a href="http://glyphicons.com/" target="_blank">Glyphicons</a>.</p>
+			<h3>Todo</h3>
+			<p>In version 2 I intend to rebuild SwipeMe from the ground-up, removing all CSS requirements and instead managing the menu transitions and positioning with Javascript - using CSS translations and fallbacks where possible.</p>
+		</div>
+		<div id="swipeme-main" class="panel panel-main">
+			<div class="contents">
+				<div class="jumbotron">
+					<div class="container">
+						<h1>SwipeMe</h1>
+						<p>A lightweight library for swiping off-canvas menus</p>
+					</div>
+				</div>
+				<p>SwipeMe is a Javascript library built to swipe open/close off-canvas navigation menus – currently relying on CSS3 animations. When a swipe is detected, SwipeMe will add (or remove) the appropriate CSS class from a main 'container' element. For an in-depth example of how to implement an off-canvas navigation pattern, see <a href="http://jasonweaver.name/lab/offcanvas/" target="_blank">this brilliant example</a> by Jason Weaver.</p>
+				<h2>Implementation</h2>
+				<h3>HTML</h3>
+				<div data-swipeme-ignore="true">
+					<div><div id="highlighter_470937" class="syntaxhighlighter  php"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php plain">&lt;div id=</code><code class="php string">"swipeme"</code><code class="php plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">&lt;div </code><code class="php keyword">class</code><code class="php plain">=</code><code class="php string">"off-canvas-left"</code><code class="php plain">&gt;Left off-canvas&lt;/div&gt;</code></div><div class="line number3 index2 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">&lt;div </code><code class="php keyword">class</code><code class="php plain">=</code><code class="php string">"main-content"</code><code class="php plain">&gt;Main content&lt;/div&gt;</code></div><div class="line number4 index3 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">&lt;div </code><code class="php keyword">class</code><code class="php plain">=</code><code class="php string">"off-canvas-right"</code><code class="php plain">&gt;Right off-canvas&lt;/div&gt;</code></div><div class="line number5 index4 alt2"><code class="php plain">&lt;/div&gt;</code></div><div class="line number6 index5 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div></div></td></tr></tbody></table></div></div>
+				</div>
+				<h3>Javascript</h3>
+				<div data-swipeme-ignore="true">
+					<div><div id="highlighter_62840" class="syntaxhighlighter  js"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">swipe = </code><code class="js keyword">new</code> <code class="js plain">SwipeMe(document.getElementById(</code><code class="js string">'swipeme'</code><code class="js plain">));</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div></div></td></tr></tbody></table></div></div>
+				</div>
+				<h2>Customisation</h2>
+				<h3>Disabling SwipeMe on certain elements</h3>
+				<p>You may wish to prevent SwipeMe from triggering a swipe event when touching certain elements on a page – a common example being an image carousel. Simply add a <code>data-swipeme-ignore="true"</code> attribute to prevent swipe events being triggered when the element, or any of its child elements, are touched.</p>
+				<h3>Options</h3>
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Option</th>
+							<th>Default</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>accessClasses</code></td>
+							<td><pre>{
+	left: 'access-left',
+	right: 'access-right'
+}							</pre></td>
+							<td>An object containing the class names that should be applied when exposing the left and right hand menus</td>
+						</tr>
+						<tr>
+							<td><code>direction</code></td>
+							<td><pre>[
+	'left',
+	'right'
+]						</pre></td>
+							<td>A array describing in which direction(s) off-canvas menus are available. May be passed as a string "left" or "right"</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div id="swipeme-right" class="panel panel-right">
+			<div class="page-header">
+				<h2>Caveats</h2>
+			</div>
+			<h3>Browser Support</h3>
+			<p>As the library currently only adds and removes CSS classes, all animations are CSS-generated – so &lt;=IE9 and Opera Mini won't get any animations. Ancient versions of IE will need also the Array.indexOf prototype available <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf" target="_blank">here</a>.</p>
+			<h3>iOS 7</h3>
+			<p>iOS 7 adds swipe navigation gestures to Safari, which (as far as I'm aware) can't be disabled. It's still possible to use this library with iOS 7 – the native gestures are only triggered when swiping from the very edge of the page.</p>
+		</div>
+	</div>
+</div><!-- /.container-fluid -->
 
 
 
@@ -114,7 +212,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- END CORE BOOTSTRAP JS -->
 
-    <!-- DASH JS -->
+    <!-- DASH JS --
     <script src="js/jquery.touchSwipe.min.js"></script>
     <script src="js/dash.js"></script>
     <script src="js/demo.js"></script>
